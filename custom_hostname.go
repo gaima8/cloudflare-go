@@ -118,7 +118,7 @@ type CustomHostnameFallbackOriginResponse struct {
 func (api *API) UpdateCustomHostnameSSL(ctx context.Context, zoneID string, customHostnameID string, ssl CustomHostnameSSL) (*CustomHostnameResponse, error) {
 	uri := "/zones/" + zoneID + "/custom_hostnames/" + customHostnameID
 	ch := CustomHostname{
-		SSL: ssl,
+		SSL: &ssl,
 	}
 	res, err := api.makeRequestContext(ctx, http.MethodPatch, uri, ch)
 	if err != nil {
