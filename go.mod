@@ -1,4 +1,4 @@
-module github.com/cloudflare/cloudflare-go
+module github.com/gaima8/cloudflare-go
 
 go 1.15
 
